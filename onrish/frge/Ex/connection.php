@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=onlineri_hta;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=DB;charset=utf8mb4";
 $options = [
   PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
   PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
@@ -7,7 +7,7 @@ $options = [
 ];
 
 try {
-  $con = new PDO($dsn, "onlineri_hta", "H@TWr6Z?Jz7s", $options);
+  $con = new PDO($dsn, "onlineri_hta", "Pass", $options);
 } catch (Exception $e) {
   error_log($e->getMessage());
   exit('Connection Error'); 
