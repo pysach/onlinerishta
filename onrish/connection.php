@@ -11,7 +11,7 @@ $options = [
 ];
 
 try {
-  $con = new PDO($dsn, "onliner1_sd_ondb", "Pass", $options);
+  $con = new PDO($dsn, "USER", "Pass", $options);
 } catch (Exception $e) {
   error_log($e->getMessage());
   exit('Something weird happened'); //something a user can understand
