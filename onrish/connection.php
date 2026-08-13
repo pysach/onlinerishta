@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Kolkata');
 $date = date('Y-m-d H:i:s', time());
 
-$dsn = "mysql:host=localhost;dbname=onliner1_db_rishta;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=DB;charset=utf8mb4";
 
 $options = [
     PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
@@ -11,7 +11,7 @@ $options = [
 ];
 
 try {
-  $con = new PDO($dsn, "onliner1_sd_ondb", "qL.s@[-?q?(({4-e", $options);
+  $con = new PDO($dsn, "onliner1_sd_ondb", "Pass", $options);
 } catch (Exception $e) {
   error_log($e->getMessage());
   exit('Something weird happened'); //something a user can understand
