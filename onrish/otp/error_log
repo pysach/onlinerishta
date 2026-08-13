@@ -1,0 +1,96 @@
+[14-Dec-2025 09:00:24 Asia/Calcutta] OTP Email Error: SMTP Error: Could not authenticate.
+[14-Dec-2025 09:02:29 Asia/Calcutta] OTP Email Error: SMTP Error: Could not authenticate.
+[14-Dec-2025 09:02:39 Asia/Calcutta] OTP Email Error: SMTP Error: Could not authenticate.
+[14-Dec-2025 09:11:00 Asia/Calcutta] OTP Email Error: SMTP Error: Could not authenticate.
+[14-Dec-2025 09:16:05 Asia/Calcutta] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in /home/onliner1/public_html/otp/send_otp.php on line 54
+[14-Dec-2025 10:25:01 Asia/Calcutta] OTP SEND ERROR: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server
+[14-Dec-2025 10:25:07 Asia/Calcutta] OTP SEND ERROR: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server
+[14-Dec-2025 10:25:33 Asia/Calcutta] OTP SEND ERROR: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server
+[14-Dec-2025 10:28:43 Asia/Calcutta] OTP SEND ERROR: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server
+[14-Dec-2025 10:29:30 Asia/Calcutta] OTP SEND ERROR: SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server
+[14-Dec-2025 18:08:43 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:43 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:47 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:47 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:47 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:47 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:49 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:08:49 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:26 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:26 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:27 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:30 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/index1.php on line 6
+[14-Dec-2025 18:09:30 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/index1.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index1.php on line 6
+[21-Dec-2025 11:16:30 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:30 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:30 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/send_otp.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/send_otp.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:16:32 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/send_otp.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:18:12 Asia/Calcutta] PHP Warning:  require(../PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:18:12 Asia/Calcutta] PHP Warning:  require(../PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 11:18:12 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required '../PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/send_otp.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/send_otp.php on line 7
+[21-Dec-2025 14:26:18 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 64 in /home/onliner1/public_html/otp/verify_otp.php on line 115
+[21-Dec-2025 14:26:26 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 64 in /home/onliner1/public_html/otp/verify_otp.php on line 115
+[21-Dec-2025 14:29:32 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 64 in /home/onliner1/public_html/otp/verify_otp.php on line 115
+[21-Dec-2025 14:36:43 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 65 in /home/onliner1/public_html/otp/verify_otp.php on line 116
+[21-Dec-2025 14:36:46 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 65 in /home/onliner1/public_html/otp/verify_otp.php on line 116
+[21-Dec-2025 14:36:51 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 65 in /home/onliner1/public_html/otp/verify_otp.php on line 116
+[21-Dec-2025 14:36:52 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 65 in /home/onliner1/public_html/otp/verify_otp.php on line 116
+[21-Dec-2025 14:36:54 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 65 in /home/onliner1/public_html/otp/verify_otp.php on line 116
+[21-Dec-2025 14:46:11 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 45 in /home/onliner1/public_html/otp/verify_otp.php on line 112
+[21-Dec-2025 14:46:14 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 45 in /home/onliner1/public_html/otp/verify_otp.php on line 112
+[21-Dec-2025 14:50:22 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 48 in /home/onliner1/public_html/otp/verify_otp.php on line 115
+[21-Dec-2025 14:50:28 Asia/Calcutta] PHP Parse error:  Unclosed '{' on line 48 in /home/onliner1/public_html/otp/verify_otp.php on line 115
+[21-Dec-2025 16:35:58 Asia/Calcutta] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/verify_otp.php on line 3
+[21-Dec-2025 16:35:58 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/verify_otp.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/verify_otp.php on line 3

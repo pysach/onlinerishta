@@ -1,0 +1,68 @@
+[13-Dec-2025 10:33:37 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:35:47 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:38:05 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:40:02 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:40:26 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:40:32 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 10:40:44 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Attempt to assign property "SMTPDebug" on null in /home/onliner1/public_html/otp/index.php:73
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index.php on line 73
+[13-Dec-2025 10:40:47 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Attempt to assign property "SMTPDebug" on null in /home/onliner1/public_html/otp/index.php:73
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/index.php on line 73
+[13-Dec-2025 10:47:56 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:00:08 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:01:58 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:04:54 Asia/Calcutta] Mailer Error: SMTP Error: Could not connect to SMTP host.
+[13-Dec-2025 11:05:18 Asia/Calcutta] Mailer Error: Invalid address:  (From): otponlinerishta.in
+[13-Dec-2025 11:05:50 Asia/Calcutta] Mailer Error: SMTP Error: Could not connect to SMTP host.
+[13-Dec-2025 11:06:56 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:08:02 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:08:25 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:09:15 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:09:18 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:09:22 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:10:28 Asia/Calcutta] Mailer Error: SMTP Error: Could not authenticate.
+[13-Dec-2025 11:12:55 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:14:20 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:16:26 Asia/Calcutta] Mailer Error: SMTP Error: Could not connect to SMTP host.
+[13-Dec-2025 11:16:30 Asia/Calcutta] Mailer Error: SMTP Error: Could not connect to SMTP host.
+[13-Dec-2025 11:18:00 Asia/Calcutta] Mailer Error: SMTP Error: Could not connect to SMTP host.
+[13-Dec-2025 11:19:35 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:20:10 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 11:23:12 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 12:43:18 Asia/Calcutta] Mailer Error: Invalid address:  (From): 
+[13-Dec-2025 12:50:38 Asia/Calcutta] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/onliner1/public_html/otp/verify_otp.php on line 55
+[13-Dec-2025 12:51:02 Asia/Calcutta] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/onliner1/public_html/otp/verify_otp.php on line 55
+[13-Dec-2025 12:54:46 Asia/Calcutta] Mailer Error: SMTP Error: Could not authenticate.
+[13-Dec-2025 12:57:23 Asia/Calcutta] Mailer Error: SMTP Error: Could not authenticate.
+[14-Dec-2025 08:16:01 Asia/Calcutta] PHP Warning:  Undefined array key "otp" in /home/onliner1/public_html/otp/verify_otp.php on line 9
+[14-Dec-2025 08:16:01 Asia/Calcutta] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/onliner1/public_html/otp/verify_otp.php on line 9
+[14-Dec-2025 08:16:14 Asia/Calcutta] PHP Warning:  Undefined array key "otp" in /home/onliner1/public_html/otp/verify_otp.php on line 9
+[14-Dec-2025 08:16:14 Asia/Calcutta] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/onliner1/public_html/otp/verify_otp.php on line 9
+[01-Feb-2026 09:50:06 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:50:06 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:50:06 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/otp1/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:48 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:48 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:48 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/otp1/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:56 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:56 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:55:56 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/otp1/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:57:28 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:57:28 Asia/Calcutta] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/onliner1/public_html/otp/otp1/index.php on line 12
+[01-Feb-2026 09:57:28 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/usr/local/apps/php81/lib/php') in /home/onliner1/public_html/otp/otp1/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/onliner1/public_html/otp/otp1/index.php on line 12

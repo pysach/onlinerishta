@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS OTP Login</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .box {
+        width: 92%;
+        max-width: 380px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        margin-bottom: 14px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #6739b7;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background: #999;
+        cursor: not-allowed;
+    }
+
+    .otp-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .otp-input {
+        width: 40px;
+        height: 46px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid #aaa;
+        outline: none;
+    }
+
+    .otp-input:focus {
+        border-color: #6739b7;
+        box-shadow: 0 0 6px #c3a8ff;
+    }
+
+    #msgBox {
+        padding: 10px;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .success { color: green; }
+    .error { color: red; }
+
+    /* SUCCESS MODAL */
+    #successModal {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.45);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #successModal .modal-box {
+        background: #fff;
+        padding: 30px;
+        width: 80%;
+        max-width: 300px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        animation: popup 0.4s ease;
+    }
+
+    @keyframes popup {
+        from { transform: scale(0.7); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    
+    <!-- MOBILE INPUT SECTION -->
+    <div id="mobileSection">
+        <h2>Login with OTP</h2>
+        <input type="tel" id="mobile" maxlength="10" placeholder="Enter Mobile Number">
+        <button onclick="sendSMSOTP()">Send OTP</button>
+    </div>
+
+    <!-- OTP INPUT SECTION -->
+    <div id="otpSection" style="display: none;">
+        <h3>Enter OTP</h3>
+
+        <div class="otp-container">
+            <input class="otp-input" maxlength="1">
+            <input class="otp-input" maxlength="1">
+            <input class="otp-input" maxlength="1">
+            <input class="otp-input" maxlength="1">
+            <input class="otp-input" maxlength="1">
+            <input class="otp-input" maxlength="1">
+        </div>
+
+        <button onclick="verifyOTP()">Verify OTP</button>
+
+        <button id="resendBtn" onclick="sendSMSOTP()" disabled>
+            Resend OTP <span id="timer"></span>
+        </button>
+    </div>
+
+    <div id="msgBox"></div>
+</div>
+
+
+<!-- SUCCESS MODAL -->
+<div id="successModal">
+    <div class="modal-box">
+        🎉 Login Successful!
+    </div>
+</div>
+
+<script>
+let timer = 30;
+let interval = null;
+
+// Message Popup
+function showMsg(msg, type) {
+    const box = document.getElementById("msgBox");
+    box.innerText = msg;
+    box.className = type;
+    box.style.display = "block";
+    setTimeout(() => box.style.display = "none", 2500);
+}
+
+// SEND OTP
+function sendSMSOTP() {
+    let mobile = document.getElementById("mobile").value;
+
+    if (mobile.length !== 10) {
+        showMsg("Enter valid 10-digit number!", "error");
+        return;
+    }
+
+    showMsg("Sending OTP...", "success");
+
+    fetch("send_sms_otp.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "mobile=" + mobile
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data === "OK") {
+            document.getElementById("mobileSection").style.display = "none";
+            document.getElementById("otpSection").style.display = "block";
+
+            startTimer();
+            focusFirstOTP();
+        } else {
+            showMsg(data, "error");
+        }
+    });
+}
+
+// AUTO FOCUS FIRST OTP BOX
+function focusFirstOTP() {
+    setTimeout(() => {
+        document.querySelector(".otp-input").focus();
+    }, 200);
+}
+
+// OTP TIMER
+function startTimer() {
+    timer = 30;
+    document.getElementById("resendBtn").disabled = true;
+
+    interval = setInterval(() => {
+        document.getElementById("timer").innerText = `(${timer}s)`;
+        timer--;
+
+        if (timer < 0) {
+            clearInterval(interval);
+            document.getElementById("resendBtn").disabled = false;
+            document.getElementById("timer").innerText = "";
+        }
+    }, 1000);
+}
+
+// VERIFY OTP
+function verifyOTP() {
+    let otp = "";
+    document.querySelectorAll(".otp-input").forEach(i => otp += i.value);
+
+    if (otp.length !== 6) {
+        showMsg("Enter 6-digit OTP", "error");
+        return;
+    }
+
+    fetch("verify_sms_otp.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "otp=" + otp
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data === "VERIFIED") {
+            document.getElementById("successModal").style.display = "flex";
+
+            setTimeout(() => {
+                window.location = "dashboard.php";
+            }, 1500);
+        } else {
+            showMsg(data, "error");
+        }
+    });
+}
+
+// OTP INPUT LOGIC (auto-move, paste, auto-submit)
+document.addEventListener("DOMContentLoaded", () => {
+    let inputs = document.querySelectorAll(".otp-input");
+
+    inputs.forEach((input, index) => {
+        
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/\D/g, "");
+            if (input.value && index < 5) inputs[index+1].focus();
+            if (index === 5) verifyOTP();
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && !input.value && index > 0)
+                inputs[index-1].focus();
+        });
+
+        input.addEventListener("paste", (e) => {
+            e.preventDefault();
+            let paste = e.clipboardData.getData("text");
+            if (/^\d{6}$/.test(paste)) {
+                paste.split("").forEach((d,i) => inputs[i].value = d);
+                verifyOTP();
+            }
+        });
+
+    });
+});
+</script>
+
+</body>
+</html>

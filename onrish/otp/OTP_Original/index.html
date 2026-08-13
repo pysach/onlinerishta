@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modern OTP Login</title>
+
+<style>
+/* ----------- GLOBAL STYLING ----------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #1e1e1e, #101010);
+    color: #fff;
+}
+
+.card {
+    width: 380px;
+    padding: 32px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: slideIn 0.9s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(60px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #fff;
+}
+
+p.subtitle {
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+/* ----------- OTP INPUT BOXES ----------- */
+/* FIXED SMALL OTP BOXES */
+.otp-input {
+    width: 34px !important;
+    height: 34px !important;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1.8px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(6px);
+    color: #fff !important;
+    outline: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: 0.2s ease;
+}
+
+.otp-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 6px #ffffff70;
+}
+
+/* Smaller gap */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* box spacing */
+    margin-bottom: 24px !important; /* ⬅️ increase this value for bigger gap */
+}
+
+
+/* Mobile responsiveness (keeps small size) */
+@media (max-width: 480px) {
+    .otp-input {
+        width: 9vw !important;
+        height: 9vw !important;
+        font-size: 4.5vw !important;
+        border-radius: 6px;
+    }
+
+    .otp-container {
+        gap: 2.5vw !important;
+    }
+}
+
+
+/* ----------- RESEND ----------- */
+.resend-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    display: none;
+}
+
+#timer {
+    font-weight: bold;
+}
+
+/* ----------- SUCCESS MODAL ----------- */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #0007;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 300px;
+    text-align: center;
+    animation: popUp 0.5s ease;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.3); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.modal h3 {
+    margin: 0 0 10px 0;
+}
+
+/* ----------- DARK MODE TOGGLE ----------- */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff3;
+    padding: 10px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="toggle-btn" onclick="toggleDarkMode()">🌙</div>
+
+<div class="card">
+
+    <h2>🔐 Secure OTP Login</h2>
+    <p class="subtitle">Fast • Secure • Modern Authentication</p>
+
+    <div id="msg"></div>
+
+    <!-- Email Section -->
+    <div id="emailSection">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="sendOTP()">Send OTP</button>
+    </div>
+
+    <!-- OTP Section -->
+    <div id="otpSection" style="display:none;">
+        <h3 style="color:#fff;">Enter OTP</h3>
+
+        <div class="otp-container">
+            <input class="otp-input" maxlength="1" id="otp1">
+            <input class="otp-input" maxlength="1" id="otp2">
+            <input class="otp-input" maxlength="1" id="otp3">
+            <input class="otp-input" maxlength="1" id="otp4">
+            <input class="otp-input" maxlength="1" id="otp5">
+            <input class="otp-input" maxlength="1" id="otp6">
+        </div>
+
+        <button onclick="verifyOTP()">Verify OTP</button>
+
+        <p style="color:#fff; margin-top:10px;">
+            Resend OTP in <span id="timer">30</span>s
+        </p>
+
+        <button class="resend-btn" id="resendBtn" onclick="resendOTP()">Resend OTP</button>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <h3>🎉 Login Successful!</h3>
+        <p>Welcome to your dashboard</p>
+    </div>
+</div>
+
+<script>
+/* -------- DARK MODE -------- */
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+
+/* -------- OTP Auto Move / Paste / Auto Submit -------- */
+document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll(".otp-input");
+
+    inputs.forEach((input, index) => {
+        
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/\D/g, "");
+
+            if (input.value && index < 5) {
+                inputs[index + 1].focus();
+            }
+            checkSubmit();
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && !input.value && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+
+        input.addEventListener("paste", (e) => {
+            e.preventDefault();
+            const paste = e.clipboardData.getData("text");
+
+            if (/^\d{6}$/.test(paste)) {
+                paste.split("").forEach((num, i) => inputs[i].value = num);
+                inputs[5].focus();
+                checkSubmit();
+            }
+        });
+    });
+
+    function checkSubmit() {
+        const otp = [...inputs].map(i => i.value).join("");
+        if (otp.length === 6) setTimeout(() => verifyOTP(), 150);
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const emailInput = document.getElementById("email");
+    if (emailInput) {
+        setTimeout(() => emailInput.focus(), 300); 
+    }
+});
+
+
+/* -------- TIMER -------- */
+let timerInterval;
+
+function startTimer() {
+    let sec = 30;
+    document.getElementById("timer").innerText = sec;
+
+    timerInterval = setInterval(() => {
+        sec--;
+        document.getElementById("timer").innerText = sec;
+
+        if (sec <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("resendBtn").style.display = "block";
+        }
+
+    }, 1000);
+}
+
+/* -------- SHOW OTP SECTION -------- */
+function showOTPSection() {
+    document.getElementById("emailSection").style.display = "none";
+    document.getElementById("otpSection").style.display = "block";
+
+    // AUTO FOCUS FIRST OTP INPUT
+    setTimeout(() => {
+        const firstOTP = document.getElementById("otp1");
+        if (firstOTP) firstOTP.focus();
+    }, 150);
+
+    startTimer();
+}
+
+/* -------- SEND OTP -------- */
+function sendOTP() {
+    let email = document.getElementById("email").value;
+
+    fetch("send_otp.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "email=" + encodeURIComponent(email)
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data === "OK") {
+            showOTPSection();
+        } else {
+            alert(data);
+        }
+    });
+}
+
+/* -------- RESEND OTP -------- */
+function resendOTP() {
+    sendOTP();
+    document.getElementById("resendBtn").style.display = "none";
+    startTimer();
+}
+
+/* -------- VERIFY OTP -------- */
+function verifyOTP() {
+    const inputs = document.querySelectorAll(".otp-input");
+    let otp = [...inputs].map(i => i.value).join("");
+
+    fetch("verify_otp.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "otp=" + otp
+    })
+    .then(res => res.text())
+    .then(data => {
+        if (data === "OK") {
+            document.getElementById("successModal").style.display = "flex";
+            //setTimeout(() => location.href = "dashboard.php", 1500);
+        } else {
+            alert(data);
+        }
+    });
+}
+</script>
+
+</body>
+</html>
