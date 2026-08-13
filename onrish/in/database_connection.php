@@ -1,8 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Calcutta');
-/*$connect = new PDO("mysql:host=localhost;dbname=onlineri_onchat;charset=utf8mb4", "onlineri_onchat", "LT@Akn)NslN(");*/
-
-$dsn = "mysql:host=localhost;dbname=onliner1_db_rishta;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=........_.._rishta;charset=utf8mb4";
 $options = [
     PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
@@ -10,7 +8,7 @@ $options = [
 ];
 
 try {
-  $connect = new PDO($dsn, "onliner1_sd_ondb", "qL.s@[-?q?(({4-e", $options);
+  $connect = new PDO($dsn, "user", "Pass", $options);
 } catch (Exception $e) {
   error_log($e->getMessage());
   exit('Something weird happened'); //something a user can understand
