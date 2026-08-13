@@ -1,0 +1,293 @@
+/*popedit page css start */
+
+
+body {
+		font-family: 'Varela Round', sans-serif;
+	}
+	.modal-confirm {		
+		color: #434e65;
+		width: 525px;
+	}
+	.modal-confirm .modal-content {
+		padding: 20px;
+		font-size: 16px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-confirm .modal-header {
+		background: #2b8ba7;
+		border-bottom: none;   
+        position: relative;
+		text-align: center;
+		margin: -20px -20px 0;
+		border-radius: 5px 5px 0 0;
+		padding: 15px;
+	}
+	.modal-confirm h4 {
+		text-align: center;
+		font-size: 36px;
+		margin: 10px 0;
+	}
+	.modal-confirm .form-control, .modal-confirm .btn {
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: 15px;
+		right: 15px;
+		color: #fff;
+		text-shadow: none;
+		opacity: 0.5;
+	}
+	.modal-confirm .close:hover {
+		opacity: 0.8;
+	}
+	.modal-confirm .icon-box {
+		color: #fff;		
+		width: 95px;
+		height: 95px;
+		display: inline-block;
+		border-radius: 50%;
+		z-index: 9;
+		border: 5px solid #fff;
+		padding: 15px;
+		text-align: center;
+	}
+	.modal-confirm .icon-box i {
+		font-size: 64px;
+		margin: -4px 0 0 -4px;
+	}
+	.modal-confirm.modal-dialog {
+		margin-top: 80px;
+	}
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+		background: #2b8ba7;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+		border-radius: 30px;
+		/*margin-top: 10px;*/
+		padding: 8px 0px;
+        /*border: none;*/
+    }
+ 
+	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+		    background: #d72850;
+
+		outline: none;
+	}
+	.modal-confirm .btn span {
+		margin: 1px 3px 0;
+		float: left;
+	}
+	.modal-confirm .btn i {
+		margin-left: 1px;
+		font-size: 20px;
+		float: right;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
+
+
+
+/*popedit page css end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-outline-info {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+@media (max-width:1366px){
+}
+
+
+@media (max-width:1024px){
+.hh h1 {
+    font-size: 1em;
+} 
+
+
+.hh h5 {
+    font-size: 1em;
+}
+
+.hh {
+    margin:7em 0 0 0;
+}}
+
+
+
+@media (max-width: 768px){
+.hh h1 {
+    font-size: 1em;
+}
+
+.hh h5 {
+    font-size: 1em;
+}
+
+.hvr-shutter-out-horizontal {
+    padding: 6px 15px;
+    font-size: 16px;
+}
+.hh {
+    margin: 5em 0 0 0;
+}
+
+}
+
+
+
+
+
+
+@media (max-width: 736px){
+
+.hh h1 {
+    font-size: 2em;
+    margin-bottom:20px;
+    margin-left: 2em;
+}
+
+.hh h5 {
+    font-size: 1em;
+    margin-bottom:20px;
+    margin-right: 3em;
+}
+.hh {
+    margin: 3em 0 0 0;
+}
+
+.hh {
+    font-size: 1em;
+ 
+    margin-left: 4em;
+}
+
+
+
+
+}
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+}
+
+a {
+  color: #4f92af;
+}
+
+a:hover {
+  color: #5eb8df;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .font-primary {
+  font-family: "Raleway", sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 125vh;
+  background: url("../css/img/hero-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-top: -80px;
+  z-index: 9;
+  /* countdown */
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h1 {
+ margin: 60px 0 10px 0;
+    font-size: 53px;
+    font-weight: 500;
+    font-family: none;
+    line-height: 30px;
+    /* text-transform: uppercase; */
+    color: #fff;
+}
+
+/*by sachin*/
+
+
+
+/*
+@media (max-width: 768px){
+#heero h1 {
+    font-size: 28px;
+    line-height: 36px;
+}
+}
+
+#heero h1 {
+ margin: 100px 0 10px 0;
+    font-size: 53px;
+    font-weight: 500;
+    font-family: initial;
+    line-height: 56px;
+    /* text-transform: uppercase; */
+    color: #e1d5c6;
+}
+*/
+

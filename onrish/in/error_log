@@ -1,0 +1,46 @@
+[25-Oct-2025 21:56:34 Asia/Calcutta] SQLSTATE[HY000] [1045] Access denied for user 'onlineri_hta'@'localhost' (using password: YES)
+[25-Oct-2025 22:01:00 Asia/Kolkata] PHP Warning:  Undefined array key "thank" in /home/onliner1/public_html/in/index.php on line 5
+[25-Oct-2025 22:01:00 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 6
+[25-Oct-2025 22:01:00 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 10
+[25-Oct-2025 22:01:00 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `onliner1_db_rishta`.`login_detail`.`user_id` at row 1 in /home/onliner1/public_html/in/index.php:13
+Stack trace:
+#0 /home/onliner1/public_html/in/index.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/onliner1/public_html/in/index.php on line 13
+[25-Oct-2025 22:25:52 Asia/Kolkata] PHP Warning:  Undefined array key "login_details_id" in /home/onliner1/public_html/in/update_last_activity.php on line 12
+[05-Jan-2026 19:34:20 Asia/Kolkata] PHP Warning:  Undefined array key "thank" in /home/onliner1/public_html/in/index.php on line 5
+[05-Jan-2026 19:34:20 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 6
+[05-Jan-2026 19:34:20 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 10
+[05-Jan-2026 19:34:20 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `onliner1_db_rishta`.`login_detail`.`user_id` at row 1 in /home/onliner1/public_html/in/index.php:13
+Stack trace:
+#0 /home/onliner1/public_html/in/index.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/onliner1/public_html/in/index.php on line 13
+[05-Jan-2026 19:51:21 Asia/Kolkata] PHP Warning:  Undefined array key "login_details_id" in /home/onliner1/public_html/in/update_last_activity.php on line 12
+[05-Jan-2026 19:51:21 Asia/Kolkata] PHP Warning:  Undefined array key "sex" in /home/onliner1/public_html/in/fetch_user.php on line 4
+[05-Jan-2026 19:51:21 Asia/Calcutta] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user.php on line 12
+[05-Jan-2026 19:51:21 Asia/Kolkata] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user_chat_history.php on line 9
+[05-Jan-2026 20:33:21 Asia/Kolkata] PHP Warning:  Undefined array key "login_details_id" in /home/onliner1/public_html/in/update_last_activity.php on line 12
+[05-Jan-2026 20:33:21 Asia/Kolkata] PHP Warning:  Undefined array key "sex" in /home/onliner1/public_html/in/fetch_user.php on line 4
+[05-Jan-2026 20:33:21 Asia/Calcutta] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user.php on line 12
+[05-Jan-2026 20:33:21 Asia/Kolkata] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user_chat_history.php on line 9
+[05-Jan-2026 20:34:05 Asia/Kolkata] PHP Warning:  Undefined array key "login_details_id" in /home/onliner1/public_html/in/update_last_activity.php on line 12
+[05-Jan-2026 20:34:05 Asia/Kolkata] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user_chat_history.php on line 9
+[05-Jan-2026 20:34:05 Asia/Kolkata] PHP Warning:  Undefined array key "sex" in /home/onliner1/public_html/in/fetch_user.php on line 4
+[05-Jan-2026 20:34:05 Asia/Calcutta] PHP Warning:  Undefined array key "user_id" in /home/onliner1/public_html/in/fetch_user.php on line 12
+[05-Jan-2026 20:34:07 Asia/Kolkata] PHP Warning:  Undefined array key "thank" in /home/onliner1/public_html/in/index.php on line 5
+[05-Jan-2026 20:34:07 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 6
+[05-Jan-2026 20:34:07 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 10
+[05-Jan-2026 20:34:07 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `onliner1_db_rishta`.`login_detail`.`user_id` at row 1 in /home/onliner1/public_html/in/index.php:13
+Stack trace:
+#0 /home/onliner1/public_html/in/index.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/onliner1/public_html/in/index.php on line 13
+[31-Jan-2026 18:22:48 Asia/Kolkata] PHP Warning:  Undefined array key "thank" in /home/onliner1/public_html/in/index.php on line 5
+[31-Jan-2026 18:22:48 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 6
+[31-Jan-2026 18:22:48 Asia/Kolkata] PHP Warning:  Undefined array key "tbl" in /home/onliner1/public_html/in/index.php on line 10
+[31-Jan-2026 18:22:48 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `onliner1_db_rishta`.`login_detail`.`user_id` at row 1 in /home/onliner1/public_html/in/index.php:13
+Stack trace:
+#0 /home/onliner1/public_html/in/index.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/onliner1/public_html/in/index.php on line 13
